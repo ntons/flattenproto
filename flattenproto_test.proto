@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package flattenproto;
+
+option go_package=".;flattenproto";
+
+enum EE {
+    EE_NONE     = 0;
+    EE_FIRST    = 1;
+    EE_SECOND   = 2;
+}
+
+message Bar {
+    string x2 = 2;
+    int32  x3 = 3;
+}
+
+message Foo {
+    repeated string x1 = 1;
+    string x2 = 2;
+    int32  x3 = 3;
+    map<string, string> x4 = 4;
+    string x5_xyz = 5;
+    EE  ee = 6;
+}
